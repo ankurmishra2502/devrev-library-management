@@ -3,6 +3,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="534754754904-ui3ketsk78j0rba94femaoe9gjfidim7.apps.googleusercontent.com">
+
   <title>Login Page in HTML with CSS Code Example</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -16,8 +18,19 @@
       <p> <h2>Welcome to the login Page</h2></p>
       <span>
         <p>Login with social media</p>
-        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Login with Twitter</a>
+        <!-- <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a> -->
+        <!-- <a href="#"><div class="g-signin2" data-onsuccess="onSignIn"><i class="fa fa-google" aria-hidden="true"></i></div>
+</i></a> -->
+<div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <a class="g-signin2" data-onsuccess="onSignIn" role="button">
+            <i class="fa fa-google"></i>
+            Sign In with Google
+          </a>
+        </div>
+      </div>
+    </div>
       </span>
     </div>
   </div>
@@ -48,7 +61,7 @@
     var password = document.getElementById("password").value;
     var rememberMe = document.getElementById("rememberMe").checked;
 
-    if (email === "admin@devrev.com" && password === "1234") {
+    if (email === "ankur@devrev.com" && password === "devrev") {
         window.open('main.html');
         alert("Login successful!");
     } else {
@@ -56,6 +69,20 @@
     }
   }
 </script>
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<script>
+  function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }
+</script>
+
+
 
 </body>
 </html>
