@@ -22,12 +22,11 @@
         <!-- <a href="#"><div class="g-signin2" data-onsuccess="onSignIn"><i class="fa fa-google" aria-hidden="true"></i></div>
 </i></a> -->
 <div class="col-sm-4">
-      <div class="card">
-        <a class="g-signin2" data-onsuccess="onSignIn" data-redirecturi="https://devrev-library-management-blond.vercel.app/main.html" role="button">
-          <i class="fa fa-google"></i>
-          Sign In with Google
-        </a>
-      </div>
+  <a class="g-signin2" data-onsuccess="onSignIn" role="button">
+    <i class="fa fa-google"></i>
+    Sign In with Google
+  </a>
+  
     </div>
       </span>
     </div>
@@ -68,8 +67,6 @@
   }
 </script>
 
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-
 <script>
   function onSignIn(googleUser) {
       var profile = googleUser.getBasicProfile();
@@ -86,6 +83,19 @@ if (mainWindow) {
     }
 </script>
 
+<script>
+  // Initialize Google API with the plugin_name parameter
+  gapi.load('auth2', function () {
+    gapi.auth2.init({
+      client_id: '534754754904-ui3ketsk78j0rba94femaoe9gjfidim7.apps.googleusercontent.com',
+      scope: 'email',
+      plugin_name: 'DevRev LMS' // Replace with your app's name
+    });
+  });
+</script>
+
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 
 
 </body>
