@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
     <meta name="google-signin-client_id" content="534754754904-ui3ketsk78j0rba94femaoe9gjfidim7.apps.googleusercontent.com">
 
-  <title>Login Page in HTML with CSS Code Example</title>
+  <title>DevRev Library Management System</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
@@ -18,9 +18,6 @@
       <p> <h2>Welcome to the login Page</h2></p>
       <span>
         <p>Login with social media</p>
-        <!-- <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a> -->
-        <!-- <a href="#"><div class="g-signin2" data-onsuccess="onSignIn"><i class="fa fa-google" aria-hidden="true"></i></div>
-</i></a> -->
 <div class="col-sm-4">
   <a class="g-signin2" data-onsuccess="onSignIn" role="button">
     <i class="fa fa-google"></i>
@@ -84,12 +81,12 @@ if (mainWindow) {
 </script>
 
 <script>
-  // Initialize Google API with the plugin_name parameter
+
   gapi.load('auth2', function () {
     gapi.auth2.init({
       client_id: '534754754904-ui3ketsk78j0rba94femaoe9gjfidim7.apps.googleusercontent.com',
       scope: 'email',
-      plugin_name: 'DevRev LMS' // Replace with your app's name
+      plugin_name: 'DevRev LMS'
     });
   });
 </script>
