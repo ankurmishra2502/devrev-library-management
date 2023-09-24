@@ -24,7 +24,7 @@
 <div class="col-sm-4">
       <div class="card">
         <div class="card-body">
-          <a class="g-signin2" data-onsuccess="onSignIn" role="button">
+          <a class="btn btn-block btn-social btn-google" data-onsuccess="onSignIn" data-redirecturi="https://devrev-library-management-blond.vercel.app/main.html" role="button">
             <i class="fa fa-google"></i>
             Sign In with Google
           </a>
@@ -79,6 +79,7 @@
       console.log('Name: ' + profile.getName());
       console.log('Image URL: ' + profile.getImageUrl());
       console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      window.location.href = 'main.html';
     }
 </script>
 
